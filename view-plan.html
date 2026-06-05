@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Saving Plan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px;
+      background-color: #e6f4ea; 
+      color: #1b3a1b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #3e7d1f;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #56ab2f;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    button {
+      background-color: #56ab2f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 15px auto;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3e7d1f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+      button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Current Saving Plan</h2>
+  <table id="currentPlanTable">
+    <thead>
+      <tr>
+        <th>Plan Name</th>
+        <th>Goal Amount (₹)</th>
+        <th>Monthly Income (₹)</th>
+        <th>Months</th>
+        <th>Total Expenses (₹)</th>
+        <th>Advice</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <h2>Completed Plans</h2>
+  <table id="completedPlansTable">
+    <thead>
+      <tr>
+        <th>Plan Name</th>
+        <th>Goal Amount (₹)</th>
+        <th>Months</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>House Fund</td>
+        <td>₹10,00,000</td>
+        <td>24</td>
+        <td>Completed</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="window.location.href='home.html'">Back to Home</button>
+
+</body>
+</html>

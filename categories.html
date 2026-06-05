@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Expenses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e6f4ea; 
+    }
+
+    .navbar {
+      background-color: #3e7d1f;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .form-container {
+      background: white;
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #3e7d1f;
+    }
+
+    .form-container form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .form-container input, .form-container select {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      min-width: 150px;
+    }
+
+    .form-container button {
+      background: #56ab2f;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .form-container button:hover {
+      background: #3e7d1f;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #56ab2f;
+      color: white;
+      font-size: 16px;
+    }
+
+    .expense-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .expense-box input {
+      width: 70px;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+    .expense-box button {
+      background: #56ab2f;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .expense-box button:hover {
+      background: #3e7d1f;
+    }
+
+    .delete-btn {
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .delete-btn:hover {
+      background: #cc0000;
+    }
+
+    .home-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background: #3e7d1f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .home-btn:hover {
+      background: #2a5515;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    Manage Expenses
+  </div>
+
+  <div class="form-container">
+    <h2>Add Category</h2>
+    <form>
+      <input type="text" placeholder="Category Name" required>
+      <input type="number" placeholder="Limit (₹)" required>
+      <select required>
+        <option value="" disabled selected>Priority</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Priority</th>
+      <th>Remaining to Spend</th>
+      <th>Add Expense</th>
+      <th>Delete</th>
+    </tr>
+    <tr>
+      <td>Food</td>
+      <td>High</td>
+      <td>₹5000</td>
+      <td>
+        <div class="expense-box">
+          <input type="number" placeholder="Enter">
+          <button>+</button>
+        </div>
+      </td>
+      <td><button class="delete-btn">X</button></td>
+    </tr>
+    <tr>
+      <td>Transport</td>
+      <td>Medium</td>
+      <td>₹2000</td>
+      <td>
+        <div class="expense-box">
+          <input type="number" placeholder="Enter">
+          <button>+</button>
+        </div>
+      </td>
+      <td><button class="delete-btn">X</button></td>
+    </tr>
+    <tr>
+      <td>Entertainment</td>
+      <td>Low</td>
+      <td>₹1500</td>
+      <td>
+        <div class="expense-box">
+          <input type="number" placeholder="Enter">
+          <button>+</button>
+        </div>
+      </td>
+      <td><button class="delete-btn">X</button></td>
+    </tr>
+  </table>
+
+  <button class="home-btn" onclick="window.location.href='home.html'">Back to Home</button>
+
+</body>
+</html>
